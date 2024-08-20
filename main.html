@@ -5,80 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            background-color: green;
-        }
-        .item{
-            background-color: aqua;
-            border: 1px dotted black;
-            font-size: 1.5rem;
-            padding: 10px;
-        }
-
         .container{
-            width: 600px;
+            max-width: 600px;
             background-color: rgb(41, 0, 0);
             border: 5px solid rgb(4, 255, 4);
+            max-width: 0 auto;
+        }
+
+        .row{
+            height: 200px;
+            border: 5px solid rgb(255, 188, 188);
+            display: flex; 
+        }
+
+        .row-3{   
+            justify-content: center;   
+        }
+
+        .col{
+            border: 2px dotted rgb(38, 38, 43);
             padding: 10px;
-            display: grid;
-            gap: 10px 10px;
-            grid-template-columns: repeat(6,1fr);
-            grid-template-rows: repeat(3,200px);
-            
+            box-sizing: border-box;
         }
 
-        .item-1{
-            grid-column-start: 1;
-            grid-column-end: 3;
+        .row-1 .col1{
             background-color: teal;
+            width: 33.33%;
         }
 
-        .item-2{
-            grid-column-start: 3;
-            grid-column-end: 7;
+        .row-1 .col2{
             background-color: thistle;
+            width: 66.66%;
         }
 
-        .item-4{
-            grid-column: span 2;
+        .row-2 .col1{
             background-color: tomato;
+            width: 33.33%;
         }
 
-        .item-6{
-            grid-column-start: 5;
-            grid-column-end: 7;
+        .row-2 .col2{
             background-color: turquoise;
+            width: 33.33%;
         }
 
-        .item-8{
-            grid-column-start: 2;
-            grid-column-end: 4;
+        .row-3 .col1{
             background-color: violet;
+            width: 33.33%;
         }
 
-        .item-9{
-            grid-column-start: 4;
-            grid-column-end: 6;
+        .row-3 .col2{
             background-color: yellowgreen;
+            width: 33.33%;
         }
-
-       
-
-        
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="item item-1 col-md-4 col-sm-6">Row 1 col1</div>
-        <div class="item item-2 col-md-8 col-sm-6">Row 1 col2</div>
-        
-        <div class="item item-4 col-md-4 offset-md-2">Row2 col1</div>
-        
-        <div class="item item-6 col-md-4">Row2 col2</div>
-        
-        <div class="item item-8 col-md-4 col-sm-6">Row3 col1</div>
-        <div class="item item-9 col-md-4 col-sm-6">Row3 col2</div>
-        
+        <div class=" row row-1">
+            <div class="col col1">Row1 col1</div>
+            <div class="col col2">Row1 col2</div>
+        </div>
+
+        <div class=" row row-2">
+            <div class="col col1">Row2 col1</div>
+            <div class="col col2">Row2 col2</div>
+        </div>
+
+        <div class=" row row-3">
+            <div class="col col1">Row3 col1</div>
+            <div class="col col2">Row3 col2</div>
+        </div>
+
     </div>
 </body>
 </html>
